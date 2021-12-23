@@ -1,16 +1,6 @@
 runtime: python27
-# api_version: 1
-# threadsafe: true
+vm: true
+entrypoint: gunicorn -b :$PORT main:app
 
-# handlers:
-# - url: /static
-#   static_dir: static
-# - url: /.*
-#   script: main.app
-
-# libraries:
-# - name: ssl
-#   version: latest  
-
-# env_variables:
-#   GAE_USE_SOCKETS_HTTPLIB : True
+runtime_config: 
+  python_version: 3
