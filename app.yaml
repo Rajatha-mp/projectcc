@@ -1,8 +1,8 @@
-application: app-test
-runtime: python27
-api_version: 1
-threadsafe: true
+# application: app-test
+runtime: python39
+# api_version: 1
+# threadsafe: true
 
-handlers:
-- url: /.*
-  script: main.app
+# handlers:
+# - url: /.*
+#   script: main.app
