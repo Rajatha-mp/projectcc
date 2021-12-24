@@ -1,24 +1,13 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
 
-handlers:
-- url: /
-  script: home.app
+runtime_config:
+  python_version: 3
 
-- url: /index\.html
-  script: home.app
-
-- url: /stylesheets
-  static_dir: stylesheets
-
-- url: /(.*\.(gif|png|jpg))$
-  static_files: static/\1
-  upload: static/.*\.(gif|png|jpg)$
-
-- url: /admin/.*
-  script: admin.app
-  login: admin
-
-- url: /.*
-  script: not_found.app
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
