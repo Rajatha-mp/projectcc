@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Cloud activity\n Team: Rajatha- 4MC18CS102\n Rashmi Basrur- 4MC18CS105\n'
+    return 'Cloud activity\n Team: Rajatha and Rashmi Basrur\n'
 
 
 if __name__== '__main__':
