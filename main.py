@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Google App Engine (often referred to as GAE or simply App Engine) is a cloud computing platform as a service for developing and hosting web applications in Google-managed data centers. Applications are sandboxed and run across multiple servers'
+    return 'GOOGLE APP ENGINE Cloud Activity. Team : RAJATHA & RASHMI'
 
 
 if __name__== '__main__':
